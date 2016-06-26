@@ -253,9 +253,15 @@ copy_files()
         exit 1
     fi
 
-    KERNEL_DIR="./kernel/rpi3/arch/arm/boot"
+    KERNEL_DIR="./out/target/product/rpi3/obj/KERNEL_OBJ/arch/arm/boot/dts"
     if [ ! -d $KERNEL_DIR ]; then
         echo "ERR: kernel directory not found!"
+        exit 1
+    fi
+
+    ZIMAGE_DIR="./out/target/product/rpi3/kernel"
+    if [ ! -f $ZIMAGE_DIR ]; then
+        echo "ERR: kernel image not found!"
         exit 1
     fi
 
@@ -284,9 +290,9 @@ copy_files()
 
     echo "   - copying kernel files"
     sudo mkdir $DIR_NAME/overlays
-    sudo cp $KERNEL_DIR/zImage $DIR_NAME/
-    sudo cp $KERNEL_DIR/dts/bcm2710-rpi-3-b.dtb $DIR_NAME/
-    sudo cp $KERNEL_DIR/dts/overlays/vc4-kms-v3d.dtbo $DIR_NAME/overlays/
+    sudo cp $ZIMAGE_DIR $DIR_NAME/zImage
+    sudo cp $KERNEL_DIR/bcm2710-rpi-3-b.dtb $DIR_NAME/
+    sudo cp $KERNEL_DIR/overlays/vc4-kms-v3d.dtbo $DIR_NAME/overlays/
 
     echo "   - copying ramdisk"
     sudo cp $RAMDISK_IMG $DIR_NAME/
