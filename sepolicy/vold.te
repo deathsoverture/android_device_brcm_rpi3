@@ -1,0 +1,2 @@
+# Allow vold to access zram
+allow vold swap_block_device:blk_file getattr;
