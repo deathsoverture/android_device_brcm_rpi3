@@ -52,5 +52,8 @@ BOARD_CUSTOM_BT_CONFIG := device/brcm/rpi3/bluetooth/vnd_rpi3.txt
 
 USE_CAMERA_STUB := true
 
+# Pre-optimize apps
+WITH_DEXPREOPT := true
+
 BOARD_SEPOLICY_DIRS := \
     device/brcm/rpi3/sepolicy
