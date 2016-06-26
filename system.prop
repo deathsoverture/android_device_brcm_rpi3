@@ -1,6 +1,6 @@
 ro.opengles.version=131072
 ro.sf.lcd_density=240
-debug.drm.mode.force=1280x720
+debug.drm.mode.force=1920×1080
 wifi.interface=wlan0
 ro.rfkilldisabled=1
 ro.build.selinux=1
