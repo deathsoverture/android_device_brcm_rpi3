@@ -22,6 +22,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3
 
+# CM packages
+PRODUCT_PACKAGES += \
+    AudioFX \
+    Eleven
+
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
