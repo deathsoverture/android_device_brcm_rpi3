@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES := \
     $(PRODUCT_COPY_FILES)
 
 # Include Google Apps packages
-include vendor/google/gapps/gapps.mk
+#include vendor/google/gapps/gapps.mk
 
 DEVICE_PACKAGE_OVERLAYS := device/brcm/rpi3/overlay
 PRODUCT_CHARACTERISTICS := tablet
