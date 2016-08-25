@@ -1,2 +1,0 @@
-class netlink_generic_socket
-inherits socket
