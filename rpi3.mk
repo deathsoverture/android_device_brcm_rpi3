@@ -13,7 +13,6 @@ PRODUCT_PACKAGES += \
     libGLES_mesa \
     gralloc.$(TARGET_PRODUCT) \
     hwcomposer.$(TARGET_PRODUCT) \
-    audio.a2dp.default \
     audio.primary.$(TARGET_PRODUCT) \
     wpa_supplicant \
     wpa_supplicant.conf
